@@ -1,0 +1,181 @@
+/********************
+Custom Properties
+********************/
+:root {
+  --main-color: #f2f3f4; /*f2f3f4*/
+  --secondary-color: #d6dbdf; /*d6dbdf*/
+  --font-family: "Raleway", sans-serif;
+}
+/********************
+Reset css
+********************/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  /* 
+  14 = tamaño de letra más pequeño
+  18 = tamaño de letra más grande
+  1400 = tamaño de viewport más grande
+  300 = tamaño de viewport más pequeño
+
+  Medida Estándar:
+   font-size: calc(
+    14px + (18-14) * ((100vw -300px) / (1400 - 300))
+  );
+  */
+  background-color: var(--secondary-color);
+  font-size: calc(6px + (10-8) * ((100vw -300px) / (1024 - 360)));
+  font-family: var(--font-family);
+  overflow-x: hidden;
+}
+/********************
+Site Style
+********************/
+.container {
+  background-color: var(--main-color);
+  border-radius: 5px;
+  margin-top: 5rem;
+  margin-bottom: 1.5rem;
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  margin-top: 5rem;
+  text-align: center;
+  width: 80%;
+}
+
+.header h2 {
+  font-size: 0.9rem;
+  margin: 0 0 0.5rem 0;
+  text-align: center;
+  width: 80%;
+}
+
+.header img {
+  position: absolute;
+  border-radius: 50%;
+  height: 110px;
+  top: 2rem;
+  width: 110px;
+}
+
+.profile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile h2 {
+  color: #333;
+  margin: 0.5rem 0 0 0;
+  text-align: center;
+  width: 95%;
+}
+
+.profile p {
+  font-size: 16px;
+  margin: 0 0 0.5rem 0;
+  padding: 0.5rem;
+  text-align: justify;
+  width: 95%;
+}
+
+.portfolio {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio h2 {
+  color: #333;
+  margin-top: 0.5rem;
+  text-align: center;
+  width: 95%;
+}
+
+.portfolio a {
+  cursor: pointer;
+  margin-top: 0.5rem;
+  text-decoration: none;
+}
+
+.portfolio a img {
+  height: 70px;
+  width: 70px;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer p {
+  text-align: center;
+}
+
+/********************
+Responsive
+********************/
+@media (min-width: 768px) {
+  .container {
+    background-color: var(--main-color);
+    border-radius: 5px;
+    margin-top: 5rem;
+    margin-bottom: 1.5rem;
+    margin-right: auto;
+    margin-left: auto;
+    width: 60%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    background-color: var(--main-color);
+    border-radius: 5px;
+    margin-top: 5rem;
+    margin-bottom: 1.5rem;
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    background-color: var(--main-color);
+    border-radius: 5px;
+    margin-top: 5rem;
+    margin-bottom: 1.5rem;
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+  }
+}
